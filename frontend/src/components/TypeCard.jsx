@@ -13,14 +13,14 @@ function TypeCard() {
   }, [])
 
   return (
-    <div>
+    <>
       <h2>Pokémon Types</h2>
       <ul>
         {types.map((type, index) => (
           <li key={index}>{type}</li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
 
