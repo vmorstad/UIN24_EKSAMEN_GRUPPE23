@@ -19,6 +19,7 @@ export default function PokeCard() {
 
   return (
     <>
+    <h2>MAIN POKEMONS</h2>
       {pokemonData.map(pokemon => (
         <div key={pokemon.id}>
           <h3>Name: {pokemon.name}</h3>
