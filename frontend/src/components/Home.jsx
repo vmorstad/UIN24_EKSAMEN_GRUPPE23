@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <>
-    <PokeCard />
+    <PokeCard limit={9} />
     <TypeCard />
     </>
   );

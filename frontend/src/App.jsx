@@ -1,13 +1,16 @@
 
 import './styles/App.scss'
 import React from 'react';
-import Layout from './components/Layout';
+import Layout from '../src/components/Layout';
 import Home from './components/Home';
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <Home />
+    <div className="App">
+      <Layout />
+      <Home />
+    </div>
   );
 }
 
