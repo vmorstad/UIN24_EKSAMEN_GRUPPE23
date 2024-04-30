@@ -13,10 +13,11 @@ export default function PokeCard() {
   }, []);
 
   return (
-    <>
-      {pokemonNames.map((name, index) => (
-          <h3>{name}</h3>
-      ))}
-    </>
+  <>
+  <h2>MAIN POKEMONS</h2>
+  {pokemonNames.map((name, index) => (
+  <p>{name}</p>
+  ))}
+  </>
   );
 }

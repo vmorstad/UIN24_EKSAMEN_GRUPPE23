@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function TypeCard() {
+export default function TypeCard() {
   const [types, setTypes] = useState([])
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function TypeCard() {
 
   return (
     <>
-      <h2>Pokémon Types</h2>
+      <h3>TYPES</h3>
       <ul>
         {types.map((type, index) => (
           <li key={index}>{type}</li>
@@ -24,4 +24,4 @@ function TypeCard() {
   );
 }
 
-export default TypeCard
+
