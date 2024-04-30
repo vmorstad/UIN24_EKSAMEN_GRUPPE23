@@ -1,16 +1,22 @@
 
 import './styles/App.scss'
 import React from 'react';
-import TypeCard from '../src/components/TypeCard';
-import PokeCard from './components/PokeCard';
+import Layout from './components/Layout';
 import Home from './components/Home';
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Home />
   );
 }
 
 export default App;
+
+    {/* 
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </Layout> 
+     */}
