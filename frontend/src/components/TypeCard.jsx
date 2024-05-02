@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import '../styles/TypeStyle.scss'
 
 export default function TypeCard() {
   const [types, setTypes] = useState([])
@@ -21,10 +20,11 @@ export default function TypeCard() {
   return (
     <>
       <h3>TYPES</h3>
-      <ul>
+      <ul className='TypeStyle'>
         {types.map(type => (
           <li className={type.name} key={type.name}>
-            <img src={type.picture} alt={type.name} /> {type.name}
+            <img src={type.picture} alt={type.name}/>
+            <p>{type.name}</p>
           </li>
         ))}
       </ul>

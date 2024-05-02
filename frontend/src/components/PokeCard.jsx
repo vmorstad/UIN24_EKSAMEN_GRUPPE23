@@ -20,15 +20,15 @@ const PokeCard = ({ limit }) => {
   return (
     <>
     <h2>MAIN POKEMONS</h2>
-    <div className="poke-container">
+    <ul className="PokeCardStyle">
       {pokemonData.map(pokemon => (
-        <div className="poke-card" key={pokemon.id}>
-          <h3>Name: {pokemon.name}</h3>
-          <p>ID: {pokemon.id}</p>
+        <li key={pokemon.id}>
           <img src={pokemon.picture} alt={pokemon.name} />
-        </div>
+          <h3>{pokemon.name}</h3>
+          <p>#{pokemon.id}</p>
+        </li>
       ))}
-    </div>
+    </ul>
     </>
   );
 }
