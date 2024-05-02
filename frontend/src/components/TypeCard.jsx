@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../styles/colors.scss'
+import '../styles/TypeStyle.scss'
 
 export default function TypeCard() {
   const [types, setTypes] = useState([])
@@ -29,7 +29,7 @@ export default function TypeCard() {
         ))}
       </ul>
     </>
-  );
+  )
 }
 
 

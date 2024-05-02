@@ -1,5 +1,24 @@
 ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* juster etter ønske */
+
+    img {
+        margin-right: 10px; /* litt mellomrom mellom bilde og tekst */
+        max-width: 50px; /* juster størrelsen på bildet etter behov */
+        border-radius: 50%; /* gjør bildekanter rundt */
+    }
+
+    li {
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+    }
 
     .normal{
         background-color: #dce1e6;
