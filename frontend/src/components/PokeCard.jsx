@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import '../styles/App.scss'
 
 const PokeCard = ({ limit }) => {
   const [pokemonData, setPokemonData] = useState([]);
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon-form/')
-      .then(response => response.json())
-      .then(data => {
-        const modifiedData = data.results.slice(0, limit).map(pokemon => ({
-          name: pokemon.name,
-          id: pokemon.url.split('/').slice(-2, -1)[0], // Henter id fra URL
-          picture: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/').slice(-2, -1)[0]}.png` // Lager bilde-URL basert på id
-        }))
-        setPokemonData(modifiedData)
-      })
+    const fetchPokemon = async () => {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
+      const data = await response.json()
+
+      const modifiedData = data.results.map(pokemon => ({
+        name: pokemon.name,
+        id: pokemon.url.split('/').slice(-2, -1)[0],
+        picture: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/').slice(-2, -1)[0]}.png`
+      }))
+      
+      setPokemonData(modifiedData)
+    };
+
+    fetchPokemon()
   }, [limit])
 
   return (
@@ -30,7 +34,7 @@ const PokeCard = ({ limit }) => {
       ))}
     </ul>
     </>
-  );
+  )
 }
 
-export default PokeCard;
+export default PokeCard
