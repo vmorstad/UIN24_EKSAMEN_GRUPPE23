@@ -10,13 +10,13 @@ export default function Teams() {
 
     return (
         <>
-            <h2>TEAMS</h2>
+        <h2>TEAMS</h2>
             <ul className='PokeCardStyle'>
             {teams.map((team, index) => (
                 <li key={index} className='teamContainer'>
                 <h2 className='teamHeadline'>{team.name}</h2>
                 <img src={team.image} alt={team.name} />
-            </li>
+                </li>
             ))}
             </ul>
         </>
