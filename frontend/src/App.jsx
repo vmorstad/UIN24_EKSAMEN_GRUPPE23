@@ -13,10 +13,10 @@ function App() {
     <>
     <Layout/>
       <Routes>
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path='/teams' element={<Teams/>}/>
         <Route path="/:type" element={<Type />} />
-        <Route path="/pokemon" element={<Pokemon id={145}/>}/>
+        <Route path="/pokemons/:pokemon" element={<Pokemon />}/>
       </Routes>
     </>
   );

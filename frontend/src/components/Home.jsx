@@ -1,8 +1,6 @@
 import React from 'react'
 import PokeCard from './PokeCard'
 import TypeCard from './TypeCard'
-import Type from './Type'
-import Pokemon from './Pokemon';
 
 export default function Home() {
 
@@ -10,7 +8,6 @@ export default function Home() {
     <>
     <PokeCard limit={9} />
     <TypeCard />
-    <Pokemon id={145}/>
     </>
   );
 }

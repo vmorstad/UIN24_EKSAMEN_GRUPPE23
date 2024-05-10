@@ -23,7 +23,7 @@ export default function TypeCard() {
       <h3>TYPES</h3>
       <ul className='TypeStyle'>
         {types.map(type => (
-          <Link to={`/${type.name}`} className="TypeLink">
+          <Link to={`/${type.name}`} className="TypeLink" key={type.name}>
           <li className={type.name} key={type.name}>
             <img src={type.picture} alt={type.name}/>
             <p>{type.name}</p>
