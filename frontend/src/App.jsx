@@ -17,7 +17,7 @@ function App() {
         <Route path="/home" element={<Home/>}/>
         <Route path="/teams" element={<Teams/>}/>
         <Route path="/team" element={<Team limit={3}/>}/>
-        <Route path="/type" element={<Type type={4}/>}/>
+        <Route path="/:type" element={<Type />} />
         <Route path="/pokemon" element={<Pokemon id={145}/>}/>
       </Routes>
     </>

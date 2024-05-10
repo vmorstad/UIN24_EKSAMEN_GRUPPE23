@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import '../styles/App.scss'
 
-const Type = ({ type }) => {
+const Type = () => {
+  const { type } = useParams()
     const [pokemonData, setPokemonData] = useState([])
     const [typeName, setTypeName] = useState('')
     const [typeImage, setTypeImage] = useState('')
@@ -32,7 +34,7 @@ const Type = ({ type }) => {
       <h2 className='typeHeadline'><img src={typeImage} alt={typeName}/>{typeName.toUpperCase()}</h2>
       <ul className='PokeCardStyle'>
         {pokemonData.map(pokemon => (
-          <li className={typeName} key={pokemon.id}>
+          <li className={type} key={pokemon.id}>
             <img src={pokemon.picture} alt={pokemon.name} />
             <h3>{pokemon.name}</h3>
             <p>#{pokemon.id}</p>

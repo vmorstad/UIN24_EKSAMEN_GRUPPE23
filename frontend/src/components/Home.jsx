@@ -11,7 +11,6 @@ export default function Home() {
     <PokeCard limit={9} />
     <TypeCard />
     <Pokemon id={145}/>
-    <Type type={4}/> {/* 1 = normal, 2 = fighting */}
     </>
   );
 }
