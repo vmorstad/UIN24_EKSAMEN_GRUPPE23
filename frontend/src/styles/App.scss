@@ -65,6 +65,67 @@
   }
 }
 
+.gridContainer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px; 
+    width: 50%; 
+
+}
+
+.pokemonStyle {
+  
+    h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      text-transform: capitalize;
+      text-align: left;
+      display: flex;
+    }
+  
+    img {
+      width: 400px; /* Juster størrelsen etter behov */
+      height: 400px; /* Juster størrelsen etter behov */
+      border-radius: 3%;
+    }
+  }
+  
+  .statSection {
+    display:grid;
+
+    h2 {
+      text-align: left;
+      display: flex;
+    }
+
+    .statSectionTest {
+            list-style-type: none;
+            padding: 0;
+        
+        
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        li p:first-child {
+            margin-right: auto;
+        }      
+    }
+
+}
+
+.ablitySection {
+    text-align: left;
+
+    li {
+        list-style-type: none;
+    }
+
+}
+
+
 .normal{
     background-color: #dce1e6;
 }
@@ -119,6 +180,6 @@
 .fairy{
     background-color: #f9dbf6;
 }
-.unknown, .shadow{
+.unknown, .shadow, .stellar{
     visibility: hidden;
 }
