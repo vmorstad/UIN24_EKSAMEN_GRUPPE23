@@ -12,7 +12,7 @@ function App() {
     <Layout/>
       <Routes>
         <Route path="/home" element={<Home/>}/>
-        <Route path="/type" element={<Type type={4}/>}/>
+        <Route path="/:type" element={<Type />} />
         <Route path="/pokemon" element={<Pokemon id={145}/>}/>
       </Routes>
     </>
