@@ -14,7 +14,7 @@ function App() {
     <>
     <Layout/>
       <Routes>
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/teams" element={<Teams/>}/>
         <Route path="/team" element={<Team limit={3}/>}/>
         <Route path="/:type" element={<Type />} />

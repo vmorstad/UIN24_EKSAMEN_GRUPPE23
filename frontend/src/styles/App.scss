@@ -5,6 +5,31 @@
   text-align: center;
 }
 
+.NavContainer {
+    display: flex; 
+    justify-content: space-between;
+    list-style-type: none;
+  
+    // Knapper
+    .pokedex-button{
+        background-color: transparent;
+
+        img{
+            width: 20px;
+            height: 20px;
+        }
+      }
+  
+    // Søkefelt
+    input[type="text"] {
+      width: 500px; 
+      padding: 5px;
+    }
+}
+  
+
+
+
 .PokeCardStyle {
     list-style-type: none;
     padding: 0;
