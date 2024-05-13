@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import '../styles/App.scss';
 
 export default function Teams() {
@@ -11,13 +12,14 @@ export default function Teams() {
     return (
         <>
         <h2>TEAMS</h2>
-            <ul className='PokeCardStyle'>
-            {teams.map((team, index) => (
+            <ul className='PokeCardStyle'> {teams.map((team, index) => (
+                <Link to={'/team/:team'} className='TeamLink'>
                 <li key={index} className='teamContainer'>
                 <h2 className='teamHeadline'>{team.name}</h2>
                 <img src={team.image} alt={team.name} />
                 </li>
-            ))}
+                </Link>
+                ))}
             </ul>
         </>
     );
