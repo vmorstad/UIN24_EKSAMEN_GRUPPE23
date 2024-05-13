@@ -7,6 +7,7 @@ import Teams from './components/Teams';
 import Team from './components/Team';
 import Type from './components/Type';
 import Pokemon from './components/Pokemon';
+import SearchResult from './components/SearchResult';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/team" element={<Team limit={3}/>}/>
         <Route path="/:type" element={<Type />} />
         <Route path="/pokemons/:pokemon" element={<Pokemon />}/>
+        <Route path="/searchresults/:pokemon" element={<SearchResult />} /> 
       </Routes>
     </>
   );

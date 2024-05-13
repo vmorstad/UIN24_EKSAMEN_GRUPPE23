@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
-  const handleClickButton1 = () => {
-    window.location.href = '/';
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value)
   };
-  const handleClickButton2 = () => {
-    window.location.href = '/teams';
+
+  const handleSearchSubmit = () => {
+    if (searchTerm.trim() !== '') {
+      window.location.href = `/searchresults/${searchTerm}`
+    }
   };
 
   return (
     <nav className="NavContainer">
       <li>
-        <button onClick={handleClickButton1} className="pokedex-button"><img src="gaming.png" alt="UIN POKEDEX" span className="UIN POKEDEX"/> UIN POKEDEX</button>
-        <button onClick={handleClickButton2} className="pokedex-button"><span className="TEAMS">TEAMS</span></button>  
+        <button className="pokedex-button">
+          <img src="gaming.png" alt="UIN POKEDEX" className="UIN POKEDEX" />
+          <Link to="/">UIN POKEDEX</Link>
+        </button>
+        <button className="pokedex-button TEAMS">
+          <Link to="/teams">TEAMS</Link>
+        </button>
       </li>
 
-      {/* Falsk søkefelt */}
-      <input type="text" placeholder="Søk..." />
+      <input
+        type="text"
+        placeholder="Søk..."
+        value={searchTerm}
+        onChange={handleInputChange}
+      />
+      <button onClick={handleSearchSubmit} className="search-button">
+        Søk
+      </button>
     </nav>
-  );
+  )
 }
-
-{/*
-//ikke fungereden knapp//
-  <input type="search" placeholder="Søk..." />
-  <button type="submit" className="search-button"><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></button>
-*/}
