@@ -18,11 +18,11 @@ export default function Nav() {
     <nav className="NavContainer">
       <li>
         <button className="pokedex-button">
-          <img src="gaming.png" alt="UIN POKEDEX" className="UIN POKEDEX" />
-          <Link to="/">UIN POKEDEX</Link>
+          <img src="\public\gaming.png" alt="UIN POKEDEX" className="UIN POKEDEX" />
+          <Link className="NavLink" to="/">UIN POKEDEX</Link>
         </button>
         <button className="pokedex-button TEAMS">
-          <Link to="/teams">TEAMS</Link>
+          <Link className="NavLink" to="/teams">TEAMS</Link>
         </button>
       </li>
 
