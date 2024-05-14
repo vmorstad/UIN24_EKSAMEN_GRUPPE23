@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 export default function Nav() {
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -18,7 +19,7 @@ export default function Nav() {
     <nav className="NavContainer">
       <li>
         <button className="pokedex-button">
-          <img src="gaming.png" alt="UIN POKEDEX" className="UIN POKEDEX" />
+          <img src="gaming.png" alt="UIN POKEDEX" />
           <Link to="/">UIN POKEDEX</Link>
         </button>
         <button className="pokedex-button TEAMS">
@@ -26,15 +27,19 @@ export default function Nav() {
         </button>
       </li>
 
-      <input
-        type="text"
-        placeholder="Søk..."
-        value={searchTerm}
-        onChange={handleInputChange}
-      />
+
+      <div className="wrapper">
+        <input
+          type="text"
+          placeholder="Søk etter pokemon"
+          value={searchTerm}
+          onChange={handleInputChange}
+        />
       <button onClick={handleSearchSubmit} className="search-button">
-        Søk
+        <img src="/public/magnifying-glass-solid.svg" alt="Search" className='SearchLogo'/>
       </button>
+      </div>
+
     </nav>
   )
 }

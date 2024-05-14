@@ -27,6 +27,24 @@
     }
 }
 
+.wrapper {
+    border: 1px solid #000;
+    display: inline-block;
+
+    input,
+    button {
+        background-color: transparent;
+        border: 0;
+    }
+
+    .SearchLogo{
+        height: 15px;
+        width: 15px;
+    }
+}
+
+
+
 .PokeCardStyle {
     list-style-type: none;
     padding: 0;
