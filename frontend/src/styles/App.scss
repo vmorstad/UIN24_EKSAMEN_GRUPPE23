@@ -217,7 +217,7 @@
     }
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 580px) {
     .PokeCardStyle {
       grid-template-columns: 1fr;
     }
@@ -228,6 +228,7 @@
 
     .NavContainer {
         display: block; 
+        
     }
 
     .gridContainer {
