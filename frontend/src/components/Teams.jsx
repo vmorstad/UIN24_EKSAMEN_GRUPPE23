@@ -14,7 +14,7 @@ export default function Teams() {
         <h2>TEAMS</h2>
             <ul className='PokeCardStyle'> 
                 {teams.map((team, index) => (
-                    <Link to={`/team/${team.name}`} className='PokeCardLink'>
+                    <Link to={`/teams/${team.name}`} className='PokeCardLink'>
                         <li key={index} className='teamContainer'>
                             <h2 className='teamHeadline'>{team.name}</h2>
                             <img src={team.image} alt={team.name} />
