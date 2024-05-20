@@ -19,7 +19,7 @@ export default function Nav() {
     <nav className="NavContainer">
       <li>
         <button className="pokedex-button">
-          <img src="\public\gaming.png" alt="UIN POKEDEX" className="UIN POKEDEX" />
+          <img src="/gaming.png" alt="UIN POKEDEX" className="UIN POKEDEX" />
           <Link className="NavLink" to="/">UIN POKEDEX</Link>
         </button>
         <button className="pokedex-button TEAMS">
@@ -36,7 +36,7 @@ export default function Nav() {
           onChange={handleInputChange}
         />
       <button onClick={handleSearchSubmit} className="search-button">
-        <img src="/public/magnifying-glass-solid.svg" alt="Search" className='SearchLogo'/>
+        <img src="/magnifying-glass-solid.svg" alt="Search" className='SearchLogo'/>
       </button>
       </div>
 
