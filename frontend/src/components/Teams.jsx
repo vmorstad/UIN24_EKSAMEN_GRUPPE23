@@ -1,27 +1,40 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import {createClient} from '@sanity/client'
 import '../styles/App.scss';
 
-export default function Teams() {
-    const teams = [
-        { name: 'Team Instinct', image: 'https://raw.githubusercontent.com/ackarlse/UIN24_eksamen/master/ressurser/teams/Team_Instinct.webp' },
-        { name: 'Team Mystic', image: 'https://raw.githubusercontent.com/ackarlse/UIN24_eksamen/master/ressurser/teams/Team_Mystic.webp' },
-        { name: 'Team Valor', image: 'https://raw.githubusercontent.com/ackarlse/UIN24_eksamen/master/ressurser/teams/Team_Valor.webp' }
-    ];
+export const client = createClient({
+    projectId: "2zyda5m8",
+    dataset: "production",
+    useCdn: true,
+    apiVersion: "2022-03-07"
+  })
 
-    return (
-        <>
-        <h2>TEAMS</h2>
-            <ul className='PokeCardStyle'> 
-                {teams.map((team, index) => (
-                    <Link to={`/team/${team.name}`} className='PokeCardLink'>
-                        <li key={index} className='teamContainer'>
-                            <h2 className='teamHeadline'>{team.name}</h2>
-                            <img src={team.image} alt={team.name} />
-                        </li>
-                    </Link>
-                ))}
-            </ul>
-        </>
-    );
+export default function Teams() {
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    client.fetch('*[_type == "team"]').then(data => {
+      setTeams(data);
+      console.log('Pokemon data:', data);
+    }).catch(err => {
+      console.error('Feil ved henting av team:', err);
+    });
+  }, []);
+
+  return (
+    <>
+      <h2>TEAMS</h2>
+      <ul className='PokeCardStyle'>
+        {teams.map((team, index) => (
+          <Link to={`/teams/${team.slug.current}`} className='PokeCardLink' key={index}>
+            <li className='teamContainer'>
+              <h2 className='teamHeadline'>{team.title}</h2>
+              <img src={team.image.asset._ref} alt={team.title} />
+            </li>
+          </Link>
+        ))}
+      </ul>
+    </>
+  );
 }
