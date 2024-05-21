@@ -31,7 +31,7 @@ export default function Pokemon() {
             effect: abilityData.effect_entries.find(entry => entry.language.name === 'en').effect,
             shortEffect: abilityData.effect_entries.find(entry => entry.language.name === 'en').short_effect
           };
-        });
+        });  //*** Kilde 3 ***\\
         const abilities = await Promise.all(abilitiesPromises)
       
         setPokemonData({

@@ -9,7 +9,7 @@ export default function PokeCard({ limit }) {
     const fetchPokemon = async () => {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
       const data = await response.json()
-  
+//*** Kilde 4 ***\\
       const modifiedData = data.results.map(pokemon => ({
         name: pokemon.name,
         id: pokemon.url.split('/').slice(-2, -1)[0],

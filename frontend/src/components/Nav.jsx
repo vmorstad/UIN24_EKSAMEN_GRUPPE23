@@ -9,6 +9,7 @@ export default function Nav() {
     setSearchTerm(event.target.value)
   };
 
+//*** Kilde 1 ***\\
   const handleSearchSubmit = () => {
     if (searchTerm.trim() !== '') {
       window.location.href = `/searchresults/${searchTerm}`

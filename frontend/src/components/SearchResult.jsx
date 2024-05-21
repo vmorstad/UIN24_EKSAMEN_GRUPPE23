@@ -23,7 +23,7 @@ function renderSearchResult(searchResult) {
   if (searchResult === 'not-found') {
     return <p>Det du søker etter finnes ikke</p>
   }
-
+//*** Kilde 2 ***\\
   return (
     <>
       {searchResult && (
