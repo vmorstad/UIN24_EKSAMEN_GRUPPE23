@@ -5,7 +5,7 @@ function fetchPokemonData(pokemonName, setSearchResult) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
       .then(response => {
         if (!response.ok) {
-          throw new Error('Det du søker etter finnes ikke')
+          throw new Error('Det du  etter finnes ikke')
         }
         return response.json()
       })
@@ -55,7 +55,7 @@ export default function SearchResult() {
 
   return (
     <div>
-      <h1>Search Result for {pokemon}</h1>
+      <h1>Søkeresultat for {pokemon}</h1>
       {renderSearchResult(searchResult, pokemon)}
     </div>
   )

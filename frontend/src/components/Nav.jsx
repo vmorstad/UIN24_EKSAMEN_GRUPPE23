@@ -21,10 +21,10 @@ export default function Nav() {
       <li>
         <button className="pokedex-button">
           <img src="/gaming.png" alt="UIN POKEDEX" className="UIN POKEDEX" />
-          <Link className="NavLink" to="/">UIN POKEDEX</Link>
+          <Link className="NavLink" to="/" key="home">UIN POKEDEX</Link>
         </button>
         <button className="pokedex-button TEAMS">
-          <Link className="NavLink" to="/teams">TEAMS</Link>
+          <Link className="NavLink" to="/teams" key="teams">TEAMS</Link>
         </button>
       </li>
 

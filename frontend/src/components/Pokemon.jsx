@@ -54,12 +54,12 @@ export default function Pokemon() {
   return (
     <>
       <div className='gridContainer'>
-        <div className='pokemonStyle'>
+        <article className='pokemonStyle'>
           <h2>{pokemonData.name}</h2>
           <img src={pokemonData.picture} alt={pokemonData.name} className={pokemonData.types[0].name} />
-        </div>
+        </article>
 
-        <div className='statSection'>
+        <article className='statSection'>
           <h2>TYPE(S)</h2>
           <ul className='TypeStyle'>
             {pokemonData.types.map((type, index) => (
@@ -79,10 +79,10 @@ export default function Pokemon() {
               </li>
             ))}
           </ul>
-        </div>
+        </article>
       </div>
 
-      <div className='ablitySection'>
+      <article className='ablitySection'>
         <h2>ABILITIES</h2>
         <ul>
           {abilitiesData.map((ability, index) => (
@@ -93,7 +93,7 @@ export default function Pokemon() {
             </li>
           ))}
         </ul>
-      </div>
+      </article>
     </>
   );
 }
